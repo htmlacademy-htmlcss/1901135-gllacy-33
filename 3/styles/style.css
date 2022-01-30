@@ -1,0 +1,355 @@
+@font-face {
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/inter-400.woff2) format(woff2);
+    font-display: swap;
+}
+@font-face {
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/inter-700.woff2) format(woff2);
+    font-display: swap;
+}
+@font-face {
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 900;
+    src: url(fonts/inter-900.woff2) format(woff2);
+    font-display: swap;
+}
+body {
+    font-family: 'inter', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2D3440;
+    background: #FEAFC3;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+.page-header {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.logo-link {
+}
+.logo-image {
+}
+.navigation {
+}
+.navigation-list {
+}
+.navigation-item {
+}
+.navigation-link {
+}
+.navigation-menu {
+}
+.navigation-menu {
+}
+.navigation-menu {
+}
+.header-phone {
+}
+.navigation-search {
+    background: url(../images/icons/search.svg) no-repeat left;
+    padding-left: 20px;
+}
+.navigation-enter {
+    background: url(../images/icons/enter.svg) no-repeat left;
+    padding-left: 20px;
+}
+.navigation-cart {
+    background: url(../images/icons/cart.svg) no-repeat left;
+    padding-left: 20px;
+}
+.visually-hidden {
+    display: none;
+}
+.main-index {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.advantages {
+}
+.advantges-basic {
+}
+.advantages-description {
+}
+.advantages-title {
+}
+.advantages-subtitle {
+}
+.button {
+}
+.regular-button {
+}
+.advantages-slider {
+}
+.slider-item {
+}
+.slider-item-activ {
+}
+.slider-button {
+    background: url(../images/icons/arrow-white.svg) center no-repeat;
+    border: solid #FCFCFC;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+
+}
+.slider-prev {
+}
+.slider-image {
+}
+.slider-next {
+    transform: rotate(180deg);
+}
+.advantages-footer {
+}
+.slider-pagination {
+}
+.slider-pagination-item {
+}
+.slider-pagination-button {
+    background: url(../images/icons/dote.svg);
+    background-size: cover;
+    border: none;
+    width: 12px;
+    height: 12px;
+    opacity: 0.3;
+}
+.social-list {
+}
+.social-item:first-child {
+    background:  url(../images/icons/vk-icon.svg) no-repeat center;
+    width: 24px;
+    height: 24px;
+}
+.social-item:nth-child(2) {
+    background:  url(../images/icons/fb-icon.svg) no-repeat center;
+    width: 24px;
+    height: 24px;
+}
+.social-item:last-child {
+    background:  url(../images/icons/inst-icon.svg) no-repeat center;
+    width: 24px;
+    height: 24px;
+}
+.promo {
+}
+.main-title {
+    margin: 0px 0px 0px 0px;
+}
+.promo-list {
+}
+.promo-item:first-child {
+    background: url(../images/promo/raspberry-fon.png) no-repeat top right;  
+    background-size: 232px 359px; 
+}
+.promo-item:nth-child(2) {
+    background: url(../images/promo/marshmellow-fon.png) no-repeat top right;  
+    background-size: 232px 359px; 
+}
+.promo-item-offer {
+}
+.offer-title {
+}
+.offer-description {
+}
+.promo-item-image {
+}
+.popular {
+}
+.product-list {
+}
+.product-item {
+}
+.product-item-link {
+}
+.product-item-image {
+    border-radius: 50%;
+}
+.product-item-title {
+}
+.product-item-description {
+}
+.product-item-order {
+}
+.order-price {
+}
+.button-basket {
+    background: url(../images/icons/cart-white.svg) no-repeat 45% ;
+    background-color: #FF2F64;
+    border-radius: 50%;
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+.privilege {
+    background: url(../images/privilege/privilege-fon.png);
+    background-size: cover;
+    border-radius: 16px;
+    padding: 24px;
+}
+.privilege-container {
+    background-color: #FCFCFC;
+    border-radius: 16px;
+    padding: 56px 24px;
+}
+.privilege-list {
+}
+.privilege-item:first-child {
+    background: url(../images/privilege/ice-cream.png) no-repeat left;
+    background-size: 48px 48px;
+    padding-left: 64px;
+}
+.privilege-item:nth-child(2) {
+    background: url(../images/privilege/cow.png) no-repeat left;
+    background-size: 48px 48px;
+    padding-left: 64px;
+}
+.privilege-item:nth-child(3) {
+    background: url(../images/privilege/leaf.png) no-repeat left;
+    background-size: 48px 48px;
+    padding-left: 64px;
+}
+.privilege-item:last-child {
+    background: url(../images/privilege/thermometr.png) no-repeat left;
+    background-size: 48px 48px;
+    padding-left: 64px;
+}
+.privilege-item-description {
+}
+.blog {
+}
+.blog-new {
+    background: url(../images/blog/blog-fon.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 16px;
+    padding: 32px 0px 63px 32px;
+}
+.blog-new-description {
+}
+.blog-title-link {
+}
+.mailing {
+    background: url(../images/blog/post-fon.jpg) no-repeat left;
+    background-size: cover;
+    border-radius: 16px;
+    padding: 6px;
+}
+.mailing-container {
+    background-color: #FCFCFC;
+    border-radius: 16px;
+    padding: 26px;
+}
+.blog-mailing-description {
+    margin: 0px 0px 42px 0px;
+}
+.mailing-form {
+}
+.button-form {
+}
+.appointernet {
+    background: url(../images/appointernet/appointernet-fon.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 16px;
+}
+.appointernet-description {
+}
+.appointernet-subtitle {
+}
+.delivery {
+}
+.delivery-description {
+}
+.delivery-form {
+}
+.delivery-form-date {
+}
+.info-label {
+    background: url(../images/icons/information.svg) no-repeat right;
+    padding-right: 17px;
+}
+.delivery-form-phone {
+}
+.delivery-form-address {
+}
+.contacts {
+    background: url(../images/contacts/contacts-fon.jpg) center;
+    background-size: cover;
+    border-radius: 16px;
+}
+.contacts-description {
+}
+.contacts-address {
+}
+.contacts-address-text {
+}
+.contacts-phone {
+}
+.contacts-work-time {
+}
+.page-footer {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.footer-social {
+}
+.footer-social-list {
+}
+.footer-info {
+}
+.footer-info-list {
+}
+.footer-info-item {
+}
+.link {
+}
+.footer-academy {
+}
+.footer-academy-link {
+}
+.academy-logo {
+}
+.footer-academy-maker {
+}
+.academy-maker-link {
+    text-decoration: underline;
+}
+.inner {
+    width: 1170px;
+    margin: 0 auto;
+}
+.page-number-list {
+}
+.page-number-item {
+}
+.page-arrow {
+    background: url(../images/icons/arrow-black.svg) no-repeat center;
+    background-size: 6px 10px;
+    border: none;
+    width: 7px;
+    height: 11px;
+    opacity: 0.3;
+}
+.page-prev {
+    transform: rotate(180deg
+    );
+}
+.visually-hidden {
+}
+.page-number-link {
+}
+.page-next {
+}
+.activ {
+    opacity: 1;
+}

@@ -2,25 +2,26 @@
     font-family: 'inter';
     font-style: normal;
     font-weight: 400;
-    src: url(fonts/inter-400.woff2) format(woff2);
+    src: url(../fonts/inter-400.woff2) format(woff2);
     font-display: swap;
 }
 @font-face {
     font-family: 'inter';
     font-style: normal;
     font-weight: 700;
-    src: url(fonts/inter-700.woff2) format(woff2);
+    src: url(../fonts/inter-700.woff2) format(woff2);
     font-display: swap;
 }
 @font-face {
     font-family: 'inter';
     font-style: normal;
     font-weight: 900;
-    src: url(fonts/inter-900.woff2) format(woff2);
+    src: url(../fonts/inter-900.woff2) format(woff2);
     font-display: swap;
 }
 body {
     font-family: 'inter', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: #2D3440;
@@ -46,14 +47,17 @@ ul {
 .navigation-list {
 }
 .navigation-item {
+    line-height: 20px;
 }
 .navigation-link {
 }
-.navigation-menu {
+.navigation-menu .navigation-item:first-child {
+    font-weight: 700;
+    line-height: 20px;
 }
-.navigation-menu {
-}
-.navigation-menu {
+.navigation-menu .navigation-item:not(:first-child) {
+    font-size: 14px;
+    line-height: 20px;
 }
 .header-phone {
 }
@@ -83,12 +87,26 @@ ul {
 .advantages-description {
 }
 .advantages-title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 46px;
 }
 .advantages-subtitle {
+    font-size: 18px;
+    line-height: 24px;
 }
 .button {
+    font-family: 'inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    background: #FCFCFC;
+    padding: 12px 32px;
+    border: 4px solid #F8CBD7;
+    border-radius: 26px;
+    box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
 }
-.regular-button {
+.button-order {
 }
 .advantages-slider {
 }
@@ -145,6 +163,9 @@ ul {
 .promo {
 }
 .main-title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 46px;
     margin: 0px 0px 0px 0px;
 }
 .promo-list {
@@ -160,6 +181,9 @@ ul {
 .promo-item-offer {
 }
 .offer-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
 }
 .offer-description {
 }
@@ -177,12 +201,18 @@ ul {
     border-radius: 50%;
 }
 .product-item-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
 }
 .product-item-description {
 }
 .product-item-order {
 }
 .order-price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
 }
 .button-basket {
     background: url(../images/icons/cart-white.svg) no-repeat 45% ;
@@ -204,24 +234,25 @@ ul {
     padding: 56px 24px;
 }
 .privilege-list {
+    padding: 0px 0px 0px 0px;
 }
 .privilege-item:first-child {
-    background: url(../images/privilege/ice-cream.png) no-repeat left;
+    background: url(../images/privilege/ice-cream.svg) no-repeat left;
     background-size: 48px 48px;
     padding-left: 64px;
 }
 .privilege-item:nth-child(2) {
-    background: url(../images/privilege/cow.png) no-repeat left;
+    background: url(../images/privilege/cow.svg) no-repeat left;
     background-size: 48px 48px;
     padding-left: 64px;
 }
 .privilege-item:nth-child(3) {
-    background: url(../images/privilege/leaf.png) no-repeat left;
+    background: url(../images/privilege/leaf.svg) no-repeat left;
     background-size: 48px 48px;
     padding-left: 64px;
 }
 .privilege-item:last-child {
-    background: url(../images/privilege/thermometr.png) no-repeat left;
+    background: url(../images/privilege/thermometer.svg) no-repeat left;
     background-size: 48px 48px;
     padding-left: 64px;
 }
@@ -236,8 +267,12 @@ ul {
     padding: 32px 0px 63px 32px;
 }
 .blog-new-description {
+    line-height: 20px;
 }
 .blog-title-link {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
 }
 .mailing {
     background: url(../images/blog/post-fon.jpg) no-repeat left;
@@ -256,6 +291,9 @@ ul {
 .mailing-form {
 }
 .button-form {
+    background: #FF2F63;
+    border: 4px solid #F7BACA;
+    color: #FCFCFC;
 }
 .appointernet {
     background: url(../images/appointernet/appointernet-fon.jpg) no-repeat center;
@@ -271,6 +309,11 @@ ul {
 .delivery-description {
 }
 .delivery-form {
+}
+.delivery-form label {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
 }
 .delivery-form-date {
 }
@@ -288,14 +331,28 @@ ul {
     border-radius: 16px;
 }
 .contacts-description {
+    font-style: normal;
 }
 .contacts-address {
+    margin: 0px 0px 32px 0px;
 }
 .contacts-address-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    font-style: normal;
 }
 .contacts-phone {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    font-style: normal;
 }
 .contacts-work-time {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
 }
 .page-footer {
     max-width: 1170px;
@@ -310,6 +367,9 @@ ul {
 .footer-info-list {
 }
 .footer-info-item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
 }
 .link {
 }
@@ -324,6 +384,18 @@ ul {
 .academy-maker-link {
     text-decoration: underline;
 }
+
+
+.select-title,
+.catalog-filter-title,
+.control {
+    font-size: 14px;
+    line-height: 20px;
+}
+.button-catalog {
+    background-color: #FEC7D5;
+    border-color: #FCFCFC;
+}
 .inner {
     width: 1170px;
     margin: 0 auto;
@@ -331,6 +403,14 @@ ul {
 .page-number-list {
 }
 .page-number-item {
+    line-height: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+}
+.page-number-activ {
+    background-color: #FCFCFC;
 }
 .page-arrow {
     background: url(../images/icons/arrow-black.svg) no-repeat center;

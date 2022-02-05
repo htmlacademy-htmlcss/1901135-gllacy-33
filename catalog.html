@@ -4,44 +4,54 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
+        rel="stylesheet" />
     <title>HTML Academy: Глейси - Каталог</title>
 </head>
 
 <body>
     <header class="page-header">
-        <a class="logo-link" href="index.html">
-            <img class="logo-image" src="images/logo.svg" width="137" height="56" alt="Логотип магазина">
-        </a>
-        <nav class="navigation">
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a href="#" class="navigation-link navigation-link-activ">Каталог</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#" class="navigation-link">Доставка и оплата</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#" class="navigation-link">О компании</a>
-                </li>
-            </ul>
-            <ul class="navigation-list navigation-menu">
-                <li class="navigation-item">
-                    <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#" class="navigation-search">
-                        <span class="visually-hidden">Поиск</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#" class="navigation-enter">Вход</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#" class="navigation-cart">Корзина</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a class="logo-link" href="index.html">
+                            <img class="logo-image" src="images/logo.svg" width="137" height="56"
+                                alt="Логотип магазина">
+                        </a>
+                    </li>
+                    <li class="navigation-item navigation-item-activ">
+                        <a href="catalog.html" class="navigation-link">Каталог</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-link">Доставка и оплата</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-link">О компании</a>
+                    </li>
+                </ul>
+                <ul class="navigation-menu">
+                    <li class="navigation-item">
+                        <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-search">
+                            <span class="visually-hidden">Поиск</span>
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-enter">
+                            <span>Вход</span>
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-cart">
+                            <span>Корзина</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="inner">
         <header class="inner-header">
@@ -59,69 +69,74 @@
         </header>
         <section class="catalog-products">
             <h2 class="main-title">Сливочное мороженое</h2>
-            <p class="select-title">Сортировка:</p>
-            <select class="catalog-filter-select" aria-label="Сортировка:">
-                <option value="popular">по популярности</option>
-                <option value="cheap">дешевле</option>
-                <option value="expensive">дороже</option>
-            </select>
             <form action="http://echo.htmlacademy.ru" class="catalog-filter" method="get">
                 <fieldset class="catalog-group">
-                    <legend class="catalog-filter-title">Цена: <input type="text" name="min-price" value="0">₽ - <input
-                            type="text" name="max-price" value="0">₽
+                    <p class="select-title">Сортировка:</p>
+                    <select class="catalog-filter-select" aria-label="Сортировка:">
+                        <option value="popular">по популярности</option>
+                        <option value="cheap">дешевле</option>
+                        <option value="expensive">дороже</option>
+                    </select>
+                </fieldset>
+                <fieldset class="catalog-group">
+                    <legend class="catalog-filter-title">Цена: <input class="filter-price" type="text" name="min-price" value="100">₽ -
+                        <input class="filter-price" type="text" name="max-price" value="500">₽
                     </legend>
-                    <input type="range">
+                    <input class="price-range" type="range">
                 </fieldset>
                 <fieldset class="catalog-group">
                     <legend class="catalog-filter-title">Жирность:</legend>
                     <ul class="catalog-filter-list">
-                        <li class="catalog-filter-title">
-                            <label class="control">
+                        <li class="catalog-filter-subtitle">
+                            <label class="control-radio">
                                 <input class="control-input" type="radio" name="product-group" value="fat:0">0%
                             </label>
                         </li>
-                        <li class="cataljg-filter-title">
-                            <label class="control">
-                                <input class="control-input" type="radio" name="product-group" value="fat:0-10">до 10%
+                        <li class="catalog-filter-subtitle">
+                            <label class="control-radio">
+                                <input class="control-input" type="radio" name="product-group" value="fat:0-10">до
+                                10%
                             </label>
                         </li>
-                        <li class="cataljg-filter-title">
-                            <label class="control">
-                                <input class="control-input" type="radio" name="product-group" value="fat:10-30">до 30%
+                        <li class="catalog-filter-subtitle">
+                            <label class="control-radio">
+                                <input class="control-input" type="radio" name="product-group" value="fat:10-30">до
+                                30%
                             </label>
                         </li>
-                        <li class="cataljg-filter-title">
-                            <label class="control">
-                                <input class="control-input" type="radio" name="product-group" value="fat:30+">выше 30%
+                        <li class="catalog-filter-subtitle">
+                            <label class="control-radio">
+                                <input class="control-input" type="radio" name="product-group" value="fat:30+">выше
+                                30%
                             </label>
                         </li>
                     </ul>
                 </fieldset>
                 <fieldset class="catalog-group">
-                    <legend class="cataljg-filter-title">Наполнители:</legend>
+                    <legend class="catalog-filter-title">Наполнители:</legend>
                     <ul class="catalog-filter-list">
-                        <li class="cataljg-filter-title">
-                            <label class="control">
+                        <li class="catalog-filter-subtitle">
+                            <label class="control-check">
                                 <input class="control-input" type="checkbox" name="chokolate">шоколадные
                             </label>
                         </li>
-                        <li class="cataljg-filter-title">
-                            <label class="control">
+                        <li class="catalog-filter-subtitle">
+                            <label class="control-check">
                                 <input class="control-input" type="checkbox" name="sugar">сахарные посыпки
                             </label>
                         </li>
-                        <li class="cataljg-filter-title">
-                            <label class="control">
+                        <li class="catalog-filter-subtitle">
+                            <label class="control-check">
                                 <input class="control-input" type="checkbox" name="fruits">фрукты
                             </label>
                         </li>
-                        <li class="cataljg-filter-title">
-                            <label class="control">
+                        <li class="catalog-filter-subtitle">
+                            <label class="control-check">
                                 <input class="control-input" type="checkbox" name="syrups">сиропы
                             </label>
                         </li>
-                        <li class="cataljg-filter-title">
-                            <label class="control">
+                        <li class="catalog-filter-subtitle">
+                            <label class="control-check">
                                 <input class="control-input" type="checkbox" name="jams">джемы
                             </label>
                         </li>
@@ -307,83 +322,89 @@
                     </div>
                 </li>
             </ul>
-            <button class="button regular-button" type="button">Показать ещё</button>
-            <ul class="page-number-list">
-                <li class="page-number-item">
-                    <button type="button" class="page-arrow page-prev">
-                        <span class="visually-hidden">предыдущая страница</span>
-                    </button>
-                </li>
-                <li class="page-number-item page-number-activ">
-                    <a href="#" class="page-number-link">1</a>
-                </li>
-                <li class="page-number-item">
-                    <a href="#" class="page-number-link">2</a>
-                </li>
-                <li class="page-number-item">
-                    <a href="#" class="page-number-link">3</a>
-                </li>
-                <li class="page-number-item">
-                    <a href="#" class="page-number-link">4</a>
-                </li>
-                <li class="page-number-item">
-                    <a href="#" class="page-number-link">5</a>
-                </li>
-                <li class="page-number-item">
-                    <button type="button" class="page-arrow page-next activ">
-                        <span class="visually-hidden">следующая страница</span>
-                    </button>
-                </li>
-            </ul>
+            <div class="page-number-list-container">
+                <button class="button regular-button" type="button">Показать ещё</button>
+                <ul class="page-number-list">
+                    <li class="page-number-item">
+                        <button type="button" class="page-arrow page-prev">
+                            <span class="visually-hidden">предыдущая страница</span>
+                        </button>
+                    </li>
+                    <li class="page-number-item page-number-activ">
+                        <a href="#" class="page-number-link">1</a>
+                    </li>
+                    <li class="page-number-item">
+                        <a href="#" class="page-number-link">2</a>
+                    </li>
+                    <li class="page-number-item">
+                        <a href="#" class="page-number-link">3</a>
+                    </li>
+                    <li class="page-number-item">
+                        <a href="#" class="page-number-link">4</a>
+                    </li>
+                    <li class="page-number-item">
+                        <a href="#" class="page-number-link">5</a>
+                    </li>
+                    <li class="page-number-item">
+                        <button type="button" class="page-arrow page-next activ">
+                            <span class="visually-hidden">следующая страница</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </section>
+        <div class="line"></div>
     </main>
     <footer class="page-footer">
-        <section class="footer-social">
-            <h2 class="visually-hidden">Социальные сети</h2>
-            <ul class="footer-social-list">
-                <li class="social-item">
-                    <a href="https://vk.com/htmlacademy" class="social-link">
-                        <span class="visually-hidden">Vkontakte</span>
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a href="https://www.facebook.com/htmlacademy" class="social-link">
-                        <span class="visually-hidden">Facebook</span>
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a href="https://www.instagram.com/htmlacademy/" class="social-link">
-                        <span class="visually-hidden">Instagram</span>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="footer-info">
-            <h2 class="visually-hidden">Информация о магазине</h2>
-            <ul class="footer-info-list">
-                <li class="footer-info-item">
-                    <a href="" class="footer-info link">Для поставщиков</a>
-                </li>
-                <li class="footer-info-item">
-                    <a href="" class="footer-info link">Наши документы</a>
-                </li>
-                <li class="footer-info-item">
-                    <a href="" class="footer-info link">О производстве</a>
-                </li>
-                <li class="footer-info-item">
-                    <a href="" class="footer-info link">Экологические стандарты</a>
-                </li>
-            </ul>
-        </section>
-        <section class="footer-academy">
-            <h2 class="visually-hidden">Разработчик сайта</h2>
-            <a href="https://htmlacademy.ru" class="footer-academy-link">
-                <img src="../1901135-gllacy-33-master/images/logo-htmlacademy.svg" width="93" height="27"
-                    alt="Логотип академии" class="academy-logo">
-            </a>
-            <p class="footer-academy-maker">Сделано в <a href="https://htmlacademy.ru" class="academy-maker-link">.html
-                    academy</a> © 2021</p>
-        </section>
+        <div class="footer-container">
+            <section class="footer-social">
+                <h2 class="visually-hidden">Социальные сети</h2>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://vk.com/htmlacademy" class="social-link">
+                            <span class="visually-hidden">Vkontakte</span>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.facebook.com/htmlacademy" class="social-link">
+                            <span class="visually-hidden">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/htmlacademy/" class="social-link">
+                            <span class="visually-hidden">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer-info">
+                <h2 class="visually-hidden">Информация о магазине</h2>
+                <ul class="footer-info-list">
+                    <li class="footer-info-item item-activ">
+                        <a href="" class="footer-info-link">Для поставщиков</a>
+                    </li>
+                    <li class="footer-info-item">
+                        <a href="" class="footer-info-link">Наши документы</a>
+                    </li>
+                    <li class="footer-info-item">
+                        <a href="" class="footer-info-link">О производстве</a>
+                    </li>
+                    <li class="footer-info-item">
+                        <a href="" class="footer-info-link">Экологические стандарты</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer-academy">
+                <h2 class="visually-hidden">Разработчик сайта</h2>
+                <a href="https://htmlacademy.ru" class="footer-academy-link">
+                    <img src="../1901135-gllacy-33-master/images/logo-htmlacademy.svg" width="93" height="27"
+                        alt="Логотип академии" class="academy-logo">
+                </a>
+                <p class="footer-academy-maker">Сделано в <a href="https://htmlacademy.ru"
+                        class="academy-maker-link">.html
+                        academy</a> © 2021</p>
+            </section>
+        </div>
     </footer>
 </body>
 

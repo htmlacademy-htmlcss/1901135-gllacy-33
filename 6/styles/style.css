@@ -278,7 +278,7 @@ body {
 }
 .slider-pagination {
     display: flex;
-    flex-basis: 54px;
+    width: 54px;
     justify-content: space-between;
     list-style: none;
     padding: 0;
@@ -294,35 +294,36 @@ body {
 }
 .social-list {
     display: flex;
-    flex-basis: 104px;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 200px;
+    justify-content: end;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 .social-item {
+    border-radius: 50%;
     transition: all ease 0.1s;
 }
-.social-item:first-child {
-    background:  url(../images/icons/vk-icon.svg) no-repeat center;
+.social-item:not(:last-child) {
+    margin: 0px 12px 0px 0px;
+}
+.social-link {
+    display: block;
+    background-color: #FCFCFC;
     border: #FEBECE solid 2px;
     border-radius: 50%;
     width: 22px;
     height: 22px;
 }
-.social-item:nth-child(2) {
-    background:  url(../images/icons/fb-icon.svg) no-repeat center;
-    border: #FEBECE solid 2px;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
+.social-item:first-child .social-link {
+    background:  url(../images/icons/vk-icon.svg) no-repeat center;  
 }
-.social-item:last-child {
+.social-item:nth-child(2) .social-link {
+    background:  url(../images/icons/fb-icon.svg) no-repeat center;  
+}
+.social-item:nth-child(3) .social-link {
     background:  url(../images/icons/inst-icon.svg) no-repeat center;
-    border: #FEBECE solid 2px;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
 }
 .social-item:hover {
     background-color: #2D3440;
@@ -386,7 +387,7 @@ body {
 /* Popular products*/
 
 .popular {
-    margin: 0px 0px 80px 0px;
+    margin: 0px 0px 0px 0px;
 }
 .popular-title {
     display: block;
@@ -398,7 +399,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 1170px;
-    justify-content: space-between;
+    justify-content: start;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -412,6 +413,10 @@ body {
     padding: 133px 40px 24px 40px;
     background-color: #FCFCFC;
     border-radius: 8px;
+    margin-bottom: 90px;
+}
+.product-item:not(:nth-child(4n)) {
+    margin-right: 30px;
 }
 .product-item-link {
     text-decoration: none;
@@ -466,7 +471,7 @@ body {
     background-size: cover;
     border-radius: 16px;
     padding: 24px;
-    margin: 0px 0px 80px 0px;
+    margin: -10px 0px 80px 0px;
 }
 .privilege-title {
     margin: 0px 0px 56px 0px;
@@ -901,9 +906,6 @@ input[type="checkbox"]:checked + .checked-style:hover {
 .inner {
     width: 1170px;
     margin: 0 auto;
-}
-.product-cards .product-item {
-    margin: 0px 0px 90px 0px;
 }
 
 /* Page number pagination*/

@@ -12,14 +12,24 @@
 <body>
     <header class="page-header">
         <nav class="navigation">
+            <!--Навигация сайта-->
             <ul class="navigation-list">
                 <li class="navigation-item">
                     <a class="logo-link" href="index.html">
                         <img class="logo-image" src="images/logo.svg" width="137" height="56" alt="Логотип магазина">
                     </a>
                 </li>
-                <li class="navigation-item">
-                    <a href="catalog.html" class="navigation-link navigation-link-activ">Каталог</a>
+                <li class="navigation-item navigation-catalog">
+                    <a href="#" class="navigation-link navigation-link-activ">Каталог</a>
+                    <div class="catalog-menu">
+                        <h5 class="catalog-menu-title">Новинки</h5>
+                        <ul class="catalog-menu-list">
+                            <li class="catalog-menu-item"><a href="#" class="catalog-menu-link">Сливочное</a></li>
+                            <li class="catalog-menu-item"><a href="#" class="catalog-menu-link">Щербеты</a></li>
+                            <li class="catalog-menu-item"><a href="#" class="catalog-menu-link">Фруктовый лед</a></li>
+                            <li class="catalog-menu-item"><a href="#" class="catalog-menu-link">Мелорин</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="navigation-item">
                     <a href="#" class="navigation-link">Доставка и оплата</a>
@@ -28,23 +38,93 @@
                     <a href="#" class="navigation-link">О компании</a>
                 </li>
             </ul>
+            <!--Меню клиента-->
             <ul class="navigation-menu">
                 <li class="menu-item">
                     <a class="navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="navigation-search">
+                    <a href="#" class="client-menu-link navigation-search">
                         <span class="visually-hidden">Поиск</span>
                     </a>
+                    <div class="popover-search">
+                        <input type="text" placeholder="Поиск по сайту" class="popover-search-input form-input">
+                        <button class="search-close-button">
+                            <svg class="search-cross" width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8858 5.05482C16.1461 4.79447 16.1461 4.37236 15.8858 4.11201C15.6254 3.85166 15.2033 3.85166 14.943 4.11201L9.99877 9.0562L5.05458 4.11201C4.79423 3.85166 4.37212 3.85166 4.11177 4.11201C3.85142 4.37236 3.85142 4.79447 4.11177 5.05482L9.05596 9.99901L4.11177 14.9432C3.85142 15.2036 3.85142 15.6257 4.11177 15.886C4.37212 16.1464 4.79423 16.1464 5.05458 15.886L9.99877 10.9418L14.943 15.886C15.2033 16.1464 15.6254 16.1464 15.8858 15.886C16.1461 15.6257 16.1461 15.2036 15.8858 14.9432L10.9416 9.99901L15.8858 5.05482Z"/>
+                                </svg>
+                        </button>
+                    </div>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="navigation-enter">
+                    <a href="#" class="client-menu-link navigation-enter">
                         <span>Вход</span>
                     </a>
+                    <div class="popover-enter-container">
+                        <div class="popover-enter">
+                            <section class="popover-enter-content">
+                                <h3 class="popover-enter-title">Личный кабинет</h3>
+                                <form class="popover-enter-auth-form" action="https://echo.htmlacademy.ru/"
+                                    method="post">
+                                    <p class="field-group">
+                                        <label class="visually-hidden" for="auth-login-popover">Логин</label>
+                                        <input class="form-input" type="text" id="auth-login-popover" name="auth-login"
+                                            placeholder="email@example.com">
+                                    </p>
+                                    <p class="field-group">
+                                        <label class="visually-hidden" for="auth-password-popover">Пароль</label>
+                                        <input class="form-input password-input" type="password" id="auth-password-popover"
+                                            name="auth-password" placeholder="Пароль">
+                                    </p>
+                                    <div class="popover-enter-help-container">
+                                        <button class="button button-form" type="submit">Войти</button>
+                                        <div class="popover-enter-help">
+                                            <a href="#" class="help-link">Забыли пароль?</a>
+                                            <a href="#" class="help-link">Регистрация</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="navigation-cart">
-                        <span>Пусто</span>
+                    <a href="#" class="client-menu-link navigation-cart">
+                        <span class="navigation-cart-empty">Пусто</span>
+                        <span class="navigation-cart-full visually-hidden"><span class="navigation-cart-quantity"></span>Товара</span>
+                        <div class="popover-cart-container">
+                            <h3 class="popover-cart-title">Корзина</h3>
+                            <ul class="cart-list">
+                                <li class="cart-item">
+                                    <img src="images\products\raspberry.jpg" alt="Фото товара" width="46" height="46"
+                                        class="cart-item-image">
+                                    <div class="cart-item-name">
+                                        <h4 class="cart-item-title">Малинка</h4>
+                                        <p class="cart-item-subtitle">
+                                            <span class="quantity">1</span>кг х <span class="price">310</span>₽
+                                        </p>
+                                    </div>
+                                    <p class="cart-item-price"><span class="price">320</span>₽</p>
+                                    <button class="cart-item-delete"></button>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="images\products\bubble-gum.jpg" alt="Фото товара" width="46" height="46"
+                                        class="cart-item-image">
+                                    <div class="cart-item-name">
+                                        <h4 class="cart-item-title">Бабл-гам</h4>
+                                        <p class="cart-item-subtitle">
+                                            <span class="quantity">1,5</span>кг х <span class="price">320</span>₽
+                                        </p>
+                                    </div>
+                                    <p class="cart-item-price"><span class="price">480</span>₽</p>
+                                    <button class="cart-item-delete"></button>
+                                </li>
+                            </ul>
+                            <div class="cart-order">
+                                <button class="button button-form">Оформить заказ</button>
+                                <p class="final-price">Итого: <span>790</span> ₽</p>
+                            </div>
+                        </div>
                     </a>
                 </li>
             </ul>
@@ -68,7 +148,7 @@
             <h2 class="main-title">Сливочное мороженое</h2>
             <form action="http://echo.htmlacademy.ru" class="catalog-filter" method="get">
                 <fieldset class="catalog-group">
-                    <p class="select-title">Сортировка:</p>
+                    <p class="catalog-filter-title">Сортировка:</p>
                     <select class="catalog-filter-select" aria-label="Сортировка:">
                         <option value="popular">по популярности</option>
                         <option value="cheap">дешевле</option>
@@ -80,7 +160,21 @@
                             value="100">₽ -
                         <input class="filter-price" type="text" name="max-price" value="500">₽
                     </legend>
-                    <input class="price-range" type="range">
+                    <div class="range-container">
+                        <div class="range">
+                            <div class="range-scale">
+                                <div class="range-bar" style="left: 26px">
+                                    <button class="range-toggle toggle-min">
+                                        <span class="range-toggle-dot"></span>
+                                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                                    </button>
+                                    <button class="range-toggle toggle-max">
+                                        <span class="range-toggle-dot"></span>
+                                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                 </fieldset>
                 <fieldset class="catalog-group">
                     <legend class="catalog-filter-title">Жирность:</legend>
@@ -359,7 +453,7 @@
                         <a href="#" class="page-number-link">5</a>
                     </li>
                     <li class="page-number-item">
-                        <button type="button" class="page-arrow page-next activ">
+                        <button type="button" class="page-arrow page-next page-arrow-activ">
                             <span class="visually-hidden">следующая страница</span>
                         </button>
                     </li>
@@ -409,13 +503,15 @@
         <section class="footer-academy">
             <h2 class="visually-hidden">Разработчик сайта</h2>
             <a href="https://htmlacademy.ru" class="footer-academy-link">
-                <img src="../1901135-gllacy-33-master/images/logo-htmlacademy.svg" width="93" height="27"
-                    alt="Логотип академии" class="academy-logo">
+                <img src="images\logo-htmlacademy.svg" width="93" height="27" alt="Логотип академии"
+                    class="academy-logo">
             </a>
             <p class="footer-academy-maker">Сделано в <a href="https://htmlacademy.ru" class="academy-maker-link">.html
                     academy</a> © 2021</p>
         </section>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

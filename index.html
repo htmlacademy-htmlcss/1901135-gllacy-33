@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="../1901135-gllacy-33-master/images/icons/favicon.png">
+    <link rel="icon" href="images\icons\favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
         rel="stylesheet" />
     <title>HTML Academy: Глейси</title>
@@ -21,8 +21,17 @@
                         <img class="logo-image" src="images/logo.svg" width="137" height="56" alt="Логотип магазина">
                     </a>
                 </li>
-                <li class="navigation-item">
+                <li class="navigation-item navigation-catalog">
                     <a href="catalog.html" class="navigation-link">Каталог</a>
+                    <div class="catalog-menu">
+                        <h5 class="catalog-menu-title">Новинки</h5>
+                        <ul class="catalog-menu-list">
+                            <li class="catalog-menu-item"><a href="#" class="catalog-menu-link">Сливочное</a></li>
+                            <li class="catalog-menu-item"><a href="#" class="catalog-menu-link">Щербеты</a></li>
+                            <li class="catalog-menu-item"><a href="#" class="catalog-menu-link">Фруктовый лед</a></li>
+                            <li class="catalog-menu-item"><a href="#" class="catalog-menu-link">Мелорин</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="navigation-item">
                     <a href="#" class="navigation-link">Доставка и оплата</a>
@@ -37,18 +46,87 @@
                     <a class="navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="navigation-search">
+                    <a href="#" class="client-menu-link navigation-search">
                         <span class="visually-hidden">Поиск</span>
                     </a>
+                    <div class="popover-search">
+                        <input type="text" placeholder="Поиск по сайту" class="popover-search-input form-input">
+                        <button class="search-close-button">
+                            <svg class="search-cross" width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8858 5.05482C16.1461 4.79447 16.1461 4.37236 15.8858 4.11201C15.6254 3.85166 15.2033 3.85166 14.943 4.11201L9.99877 9.0562L5.05458 4.11201C4.79423 3.85166 4.37212 3.85166 4.11177 4.11201C3.85142 4.37236 3.85142 4.79447 4.11177 5.05482L9.05596 9.99901L4.11177 14.9432C3.85142 15.2036 3.85142 15.6257 4.11177 15.886C4.37212 16.1464 4.79423 16.1464 5.05458 15.886L9.99877 10.9418L14.943 15.886C15.2033 16.1464 15.6254 16.1464 15.8858 15.886C16.1461 15.6257 16.1461 15.2036 15.8858 14.9432L10.9416 9.99901L15.8858 5.05482Z"/>
+                                </svg>
+                        </button>
+                    </div>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="navigation-enter">
+                    <a href="#" class="client-menu-link navigation-enter">
                         <span>Вход</span>
                     </a>
+                    <div class="popover-enter-container">
+                        <div class="popover-enter">
+                            <section class="popover-enter-content">
+                                <h3 class="popover-enter-title">Личный кабинет</h3>
+                                <form class="popover-enter-auth-form" action="https://echo.htmlacademy.ru/"
+                                    method="post">
+                                    <p class="field-group">
+                                        <label class="visually-hidden" for="auth-login-popover">Логин</label>
+                                        <input class="form-input" type="text" id="auth-login-popover" name="auth-login"
+                                            placeholder="email@example.com">
+                                    </p>
+                                    <p class="field-group">
+                                        <label class="visually-hidden" for="auth-password-popover">Пароль</label>
+                                        <input class="form-input password-input" type="password" id="auth-password-popover"
+                                            name="auth-password" placeholder="Пароль">
+                                    </p>
+                                    <div class="popover-enter-help-container">
+                                        <button class="button button-form" type="submit">Войти</button>
+                                        <div class="popover-enter-help">
+                                            <a href="#" class="help-link">Забыли пароль?</a>
+                                            <a href="#" class="help-link">Регистрация</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="navigation-cart">
-                        <span>Пусто</span>
+                    <a href="#" class="client-menu-link navigation-cart">
+                        <span class="navigation-cart-empty">Пусто</span>
+                        <span class="navigation-cart-full visually-hidden"><span class="navigation-cart-quantity"></span>Товара</span>
+                        <div class="popover-cart-container">
+                            <h3 class="popover-cart-title">Корзина</h3>
+                            <ul class="cart-list">
+                                <li class="cart-item">
+                                    <img src="images\products\raspberry.jpg" alt="Фото товара" width="46" height="46"
+                                        class="cart-item-image">
+                                    <div class="cart-item-name">
+                                        <h4 class="cart-item-title">Малинка</h4>
+                                        <p class="cart-item-subtitle">
+                                            <span class="quantity">1</span>кг х <span class="price">310</span>₽
+                                        </p>
+                                    </div>
+                                    <p class="cart-item-price"><span class="price">320</span>₽</p>
+                                    <button class="cart-item-delete"></button>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="images\products\bubble-gum.jpg" alt="Фото товара" width="46" height="46"
+                                        class="cart-item-image">
+                                    <div class="cart-item-name">
+                                        <h4 class="cart-item-title">Бабл-гам</h4>
+                                        <p class="cart-item-subtitle">
+                                            <span class="quantity">1,5</span>кг х <span class="price">320</span>₽
+                                        </p>
+                                    </div>
+                                    <p class="cart-item-price"><span class="price">480</span>₽</p>
+                                    <button class="cart-item-delete"></button>
+                                </li>
+                            </ul>
+                            <div class="cart-order">
+                                <button class="button button-form">Оформить заказ</button>
+                                <p class="final-price">Итого: <span>790</span> ₽</p>
+                            </div>
+                        </div>
                     </a>
                 </li>
             </ul>
@@ -71,11 +149,21 @@
                 <ul class="advantages-slider">
                     <li class="slider-item slider-item-activ">
                         <button class="slider-button slider-prev" type="button">
+                            <svg class="slider-arrow" aria-hidden="true" focusable="false" width="16" height="16"
+                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.13526 2.8647C6.87557 2.605 6.45451 2.605 6.19481 2.8647C5.93511 3.12439 5.93511 3.54545 6.19481 3.80515L10.3961 8.00643L6.19477 12.2077C5.93508 12.4674 5.93508 12.8885 6.19477 13.1482C6.45447 13.4079 6.87553 13.4079 7.13523 13.1482L11.8039 8.47949C11.8049 8.47855 11.8058 8.47761 11.8068 8.47666C12.0665 8.21696 12.0665 7.79591 11.8068 7.53621L7.13526 2.8647Z" />
+                            </svg>
                             <span class="visually-hidden">Предыдущее фото</span>
                         </button>
                         <img src="images\advantages\strawberry-icecream.png" width="306" height="507"
                             alt="Пример товара 1" class="slider-image">
                         <button class="slider-button slider-next" type="button">
+                            <svg class="slider-arrow" aria-hidden="true" focusable="false" width="16" height="16"
+                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.13526 2.8647C6.87557 2.605 6.45451 2.605 6.19481 2.8647C5.93511 3.12439 5.93511 3.54545 6.19481 3.80515L10.3961 8.00643L6.19477 12.2077C5.93508 12.4674 5.93508 12.8885 6.19477 13.1482C6.45447 13.4079 6.87553 13.4079 7.13523 13.1482L11.8039 8.47949C11.8049 8.47855 11.8058 8.47761 11.8068 8.47666C12.0665 8.21696 12.0665 7.79591 11.8068 7.53621L7.13526 2.8647Z" />
+                            </svg>
                             <span class="visually-hidden">Следующее фото</span>
                         </button>
                     </li>
@@ -93,7 +181,7 @@
             <div class="advantages-footer">
                 <ul class="slider-pagination">
                     <li class="slider-pagination-item">
-                        <button class="slider-pagination-button activ">
+                        <button class="slider-pagination-button pagination-button-activ">
                             <span class="visually-hidden">1 фото</span>
                         </button>
                     </li>
@@ -254,8 +342,7 @@
             <article class="blog-new">
                 <div class="blog-new-content">
                     <p class="blog-new-description">Новое в нашем блоге</p>
-                    <a href="#" class="blog-title-link">10 способов сервировки фруктовых щербетов
-                        к столу</a>
+                    <a href="#" class="blog-title-link">10 способов сервировки фруктовых щербетов</a>
                 </div>
             </article>
             <article class="mailing">
@@ -267,8 +354,8 @@
                         =)</p>
                     <form action="http://echo.htmlacademy.ru" class="mailing-form" method="post">
                         <label for="mailing-email" class="visually-hidden">E-mail</label>
-                        <input type="email" placeholder="   email@example.com" name="mailing-email" id="mailing-email"
-                            class="mailing-form-input">
+                        <input type="email" placeholder="email@example.com" name="mailing-email" id="mailing-email"
+                            class="mailing-form-input form-input">
                         <button class="button button-form" type="submit">Отправить</button>
                     </form>
                 </div>
@@ -294,17 +381,30 @@
                     <form action="http://echo.htmlacademy.ru" class="delivery-form" method="post">
                         <p class="delivery-form-date">
                             <label for="delivery-date" class="info-label">Дата</label>
-                            <input type="text" id="delivery-date" name="delivery-date" placeholder="  01.04.2020">
+                            <span class="tooltip">
+                                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                                </button>
+                                <span class="tooltip-text" role="tooltip" id="tooltip-label"><span class="tooltip-corner"></span>Укажите желаемую дату и время и мы свяжемся с вами!</span>
+                              </span>
+                            </span>
+                        <input class="form-input" type="text" id="delivery-date" name="delivery-date"
+                            placeholder="01.04.2020">
                         </p>
                         <p class="delivery-form-phone">
                             <label for="delivery-phone">Телефон</label>
-                            <input type="text" id="delivery-phone" name="delivery-phone"
-                                placeholder="  +7 800 999-00-00">
+                            <input class="form-input" type="text" id="delivery-phone" name="delivery-phone"
+                                placeholder="+7 800 999-00-00">
                         </p>
                         <p class="delivery-form-address">
                             <label for="delivery-address" class="info-label">Адрес</label>
-                            <input type="text" id="delivery-address" name="delivery-address"
-                                placeholder="  ул. Большая Конюшенная, 19/8">
+                            <span class="tooltip">
+                                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                                </button>
+                                <span class="tooltip-text" role="tooltip" id="tooltip-label"><span class="tooltip-corner"></span>Введите название улицы, дома и квартиры.</span>
+                              </span>
+                            </span>
+                            <input class="form-input" type="text" id="delivery-address" name="delivery-address"
+                                placeholder="ул. Большая Конюшенная, 19/8">
                         </p>
                         <button class="button button-delivery" type="submit">Отправить</button>
                     </form>
@@ -322,7 +422,7 @@
                     <a href="tel:+78128121212" class="contacts-phone">+7 (812) 812-12-12</a>
                     <p class="contacts-work-time">(с 10 до 20 ежедневно)</p>
                 </address>
-                <a class="button button-form">Форма обратной связи</a>
+                <a class="button button-contacts">Форма обратной связи</a>
             </div>
         </section>
     </main>
@@ -368,14 +468,45 @@
         <section class="footer-academy">
             <h2 class="visually-hidden">Разработчик сайта</h2>
             <a href="https://htmlacademy.ru" class="footer-academy-link">
-                <img src="../1901135-gllacy-33-master/images/logo-htmlacademy.svg" width="93" height="27"
-                    alt="Логотип академии" class="academy-logo">
+                <img src="images\logo-htmlacademy.svg" width="93" height="27" alt="Логотип академии"
+                    class="academy-logo">
             </a>
             <p class="footer-academy-maker">Сделано в <a href="https://htmlacademy.ru" class="academy-maker-link">.html
                     academy</a> © 2021</p>
         </section>
         <script src="app.js"></script>
     </footer>
+
+    <div class="modal-container">
+        <div class="modal">
+            <button class="modal-close-button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
+            <section class="modal-content">
+                <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+                <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+                    <p class="field-group">
+                        <label class="visually-hidden" for="auth-login">Логин</label>
+                        <input class="form-input" type="text" id="auth-login" name="auth-login" placeholder="Логин">
+                    </p>
+                    <p class="field-group">
+                        <label class="visually-hidden" for="auth-password">Пароль</label>
+                        <input class="form-input" type="password" id="auth-password" name="auth-password"
+                            placeholder="Пароль">
+                    </p>
+                    <p class="field-group">
+                        <label class="visually-hidden" for="auth-text">Пароль</label>
+                        <textarea class="form-input" type="text" id="auth-text" name="auth-text" placeholder="Пароль"
+                            rows="6"></textarea>
+                    </p>
+                    <button class="button button-form" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    
 </body>
 
 </html>

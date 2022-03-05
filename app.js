@@ -54,18 +54,18 @@ catalogButton.onmouseout = () => catalogMenu.classList.remove('open');
 
 /* Cart quantity */
 
-var cartList = document.querySelector('.cart-list');
-var cartArr = cartList.children;
-var cartEmpty = document.querySelector('.navigation-cart-empty');
-var cartFull = document.querySelector('.navigation-cart-full');
-var cartQuantity = document.querySelector('.navigation-cart-quantity');
+// var cartList = document.querySelector('.cart-list');
+// var cartArr = cartList.children;
+// var cartEmpty = document.querySelector('.navigation-cart-empty');
+// var cartFull = document.querySelector('.navigation-cart-full');
+// var cartQuantity = document.querySelector('.navigation-cart-quantity');
 
-console.log(cartArr.length);
+// console.log(cartArr.length);
 
-if (cartArr.length>0) {
-    cartEmpty.classList.add('visually-hidden');
-    cartFull.classList.remove('visually-hidden');
-    cartQuantity.textContent = cartArr.length + ' '
-} else if (cartArr.length===1) {
-    cartFull.textContent = 'Товар';
-}
+// if (cartArr.length>0) {
+//     cartEmpty.classList.add('visually-hidden');
+//     cartFull.classList.remove('visually-hidden');
+//     cartQuantity.textContent = cartArr.length + ' '
+// } else if (cartArr.length===1) {
+//     cartFull.textContent = 'Товар';
+// }

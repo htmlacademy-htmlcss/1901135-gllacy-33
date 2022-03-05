@@ -220,6 +220,8 @@ body {
     margin: 0px 0px 24px 0px;
 }
 .advantages-subtitle {
+    display: inline-block;
+    width: 414px;
     font-size: 18px;
     line-height: 24px;
     margin: 0px 0px 44px 0px;
@@ -1051,6 +1053,7 @@ body {
   }
 .range-bar {
     position: absolute;
+    left: 26px;
     height: 2px;
     width: 56px;
     margin-left: 16px;
